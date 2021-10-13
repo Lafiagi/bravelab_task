@@ -192,6 +192,7 @@ async def process_data():
     '''
     articles_result = []
     images_result = []
+    start = time.time()
     async with session() as cs:
         articles, images, article_data = get_article_tasks(cs)
         article_responses = await asyncio.gather(*articles)
@@ -224,6 +225,8 @@ async def process_data():
             clean_article['sections'] = new_section
             create_article(clean_article)
     display_result()
+    end = time.time()
+    print(f"Took {end - start} seconds to run")
     await get_updates(article_data)
 
 

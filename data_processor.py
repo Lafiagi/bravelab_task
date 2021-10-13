@@ -107,7 +107,6 @@ def process_data(article_data: dict) -> None:
         images_data
         clean_article['sections'] = add_media_and_image(cleaned_sections,
                                                         images_data)
-        print("\n\nNew sections\n\n", clean_article['sections'])
         create_article(clean_article)
 
     return
