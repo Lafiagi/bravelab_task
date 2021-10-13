@@ -1,6 +1,6 @@
 # Bravelab mapping
 Repository for the Simple mapping task. It has two versions of te script, on eruns synchronous while the other runs async.
-It took about 22 hour to write both scripts
+It took about 22 hour to write both scripts.
 #To run the script, do the following
 
 install the requirements
